@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sol-y-flor/static/css/main.b6d8c8d8.css",
+    "main.js": "/sol-y-flor/static/js/main.940b5dc9.js",
+    "static/media/videoplayback.mp4": "/sol-y-flor/static/media/videoplayback.6362b9f644a6a91587e4.mp4",
+    "static/media/Logo.jpg": "/sol-y-flor/static/media/Logo.801ef64d75f06e2e860b.jpg",
+    "index.html": "/sol-y-flor/index.html",
+    "main.b6d8c8d8.css.map": "/sol-y-flor/static/css/main.b6d8c8d8.css.map",
+    "main.940b5dc9.js.map": "/sol-y-flor/static/js/main.940b5dc9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6d8c8d8.css",
+    "static/js/main.940b5dc9.js"
+  ]
+}
