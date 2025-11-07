@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-// 1. IMPORTA el video de tu carpeta /src/img
+// 1. IMPORTA el video y el logo nuevo
 import videoSource from '../img/videoplayback.mp4';
+import logo from '../img/Logo.jpg';
 
 const Hero = () => {
   const whatsappLink = `https://wa.me/1234567890?text=Hola%20🌞,%20me%20gustaría%20hacer%20una%20reservación%20en%20Sol%20y%20Flor.`;
@@ -16,17 +17,27 @@ const Hero = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        {/* 2. USA la variable importada (videoSource) en el atributo src */}
         <source src={videoSource} type="video/mp4" />
         Tu navegador no soporta videos.
       </video>
       <div className="absolute inset-0 bg-black/40"></div>
+
       <motion.div
         className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
+        {/* LOGO CENTRADO, MÁS GRANDE Y REDONDO */}
+        <motion.img
+          src={logo}
+          alt="Logo Sol y Flor"
+          className="mx-auto mb-8 w-40 h-40 object-cover rounded-full border-4 border-white shadow-xl"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.1, duration: 0.6 }}
+        />
+
         <motion.h1
           className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-300 to-green-400 bg-clip-text text-transparent"
           initial={{ opacity: 0 }}
@@ -35,6 +46,7 @@ const Hero = () => {
         >
           Bienvenido a Sol y Flor
         </motion.h1>
+
         <motion.p
           className="text-xl md:text-2xl mb-8 font-medium"
           initial={{ opacity: 0 }}
@@ -43,6 +55,7 @@ const Hero = () => {
         >
           donde la naturaleza y el confort se encuentran.
         </motion.p>
+
         <motion.a
           href={whatsappLink}
           target="_blank"
